@@ -8,7 +8,7 @@ export const CreateTask = () => {
 
   const handleCreate = async () => {
     try {
-      await axios.post("http://localhost:9000/tasks", {
+      await axios.post("https://backend-rohiv04-rohiv04s-projects.vercel.app/tasks", {
         name: taskName,
         description: taskDescription,
         timer: taskTimer,

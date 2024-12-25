@@ -14,7 +14,7 @@ const DisplayTask = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/tasks");
+        const response = await axios.get("https://backend-67z7y5mmq-rohiv04s-projects.vercel.app/tasks");
         setTasks(response.data);
       } catch (error) {
         console.error("Error fetching tasks:", error);
@@ -55,7 +55,7 @@ const DisplayTask = () => {
 
   const handleSave = async (taskId) => {
     try {
-      const response = await axios.put(`http://localhost:9000/tasks/${taskId}`, editedTask);
+      const response = await axios.put(`https://backend-rohiv04-rohiv04s-projects.vercel.app/tasks/${taskId}`, editedTask);
       setTasks((prevTasks) =>
         prevTasks.map((task) =>
           task._id === taskId ? response.data : task

@@ -7,7 +7,7 @@ const port = 9000;
 app.use(bodyParser.json());
 const tasksRouter = require('./routes/tasks');
 const cors = require('cors');
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.get('/', (req, res) => {
     res.send('Hello World!');
     }
